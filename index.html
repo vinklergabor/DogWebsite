@@ -7,9 +7,13 @@
     <title>PumpHeadDog ($PHD) - The Ultimate Meme Coin</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
     <!-- Hero Section -->
     <header class="hero">
         <div class="container">
@@ -17,41 +21,36 @@
             <h1 class="hero-title">PumpHeadDog ($PHD)</h1>
             <p class="hero-subtitle">The Meme Coin That’ll Stretch Your Gains!</p>
             <div class="cta-buttons">
-                <a href="#buy" class="btn btn-primary">Buy $PHD Now</a>
-                <a href="#whitepaper" class="btn btn-secondary">View Whitepaper</a>
+                <a href="#buy" class="btn btn-primary" data-tooltip="Buy now to join the pack!">Buy $PHD Now</a>
+                <a href="#whitepaper" class="btn btn-secondary" data-tooltip="Read our whitepaper!">View Whitepaper</a>
             </div>
         </div>
     </header>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section id="about" class="about">
         <div class="container">
-            <div class="content">
-                <h2>What is PumpHeadDog?</h2>
-                <p>PumpHeadDog ($PHD) is the ultimate meme coin inspired by the internet's favorite stretched Shiba Inu. Join the pack and ride the most pumped pup to the moon!</p>
-            </div>
+            <h2>What is PumpHeadDog?</h2>
+            <p>PumpHeadDog ($PHD) is the ultimate meme coin inspired by the internet's favorite stretched Shiba Inu. Join the pack and ride the most pumped pup to the moon!</p>
             <img src="Unknown-2.jpg" alt="About PumpHeadDog" class="about-img">
         </div>
     </section>
 
     <!-- Tokenomics Section -->
-    <section class="tokenomics" id="tokenomics">
+    <section id="tokenomics" class="tokenomics">
         <div class="container">
             <h2>Tokenomics</h2>
-            <div class="tokenomics-details">
-                <ul class="tokenomics-list">
-                    <li>Total Supply: <strong><span class="counter" data-target="1000000000"></span> $PHD</strong></li>
-                    <li>Taxes: <strong>10%</strong> (2% Reflection, 3% Liquidity, 5% Marketing)</li>
-                    <li>Anti-whale measures for a balanced ecosystem.</li>
-                    
-                </ul>
-                <img src="token.jpg" alt="Tokenomics" class="tokenomics-img">
-            </div>
+            <ul class="tokenomics-list">
+                <li>Total Supply: <strong><span class="counter" data-target="1000000000">0</span> $PHD</strong></li>
+                <li>Taxes: <strong>10%</strong> (2% Reflection, 3% Liquidity, 5% Marketing)</li>
+                <li>Anti-whale measures for a balanced ecosystem.</li>
+            </ul>
+            <img src="token.jpg" alt="Tokenomics" class="tokenomics-img">
         </div>
     </section>
 
     <!-- Roadmap Section -->
-    <section class="roadmap" id="roadmap">
+    <section id="roadmap" class="roadmap">
         <div class="container">
             <h2>PumpHeadDog's Moon Map</h2>
             <p>Our journey to the moon, one pawprint at a time.</p>
@@ -60,7 +59,7 @@
     </section>
 
     <!-- How to Buy Section -->
-    <section class="how-to-buy" id="buy">
+    <section id="buy" class="how-to-buy">
         <div class="container">
             <h2>How to Buy $PHD</h2>
             <ol class="steps">
@@ -79,6 +78,7 @@
             <p><small>PumpHeadDog is a meme coin. This is not financial advice.</small></p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
