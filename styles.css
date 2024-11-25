@@ -10,6 +10,7 @@ body {
     background-color: #1e1e2d;
     color: #fff;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
@@ -18,12 +19,44 @@ body {
     margin: 0 auto;
 }
 
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.loader {
+    border: 8px solid #29293b;
+    border-top: 8px solid #ffdf00;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 100px 0;
     background: radial-gradient(circle, #ffdf00, #1e1e2d);
-    color: #1e1e2d;
 }
 
 .hero-img {
@@ -50,7 +83,6 @@ body {
     font-size: 1rem;
     border-radius: 30px;
     text-decoration: none;
-    color: #fff;
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -75,44 +107,42 @@ body {
     transform: scale(1.05);
 }
 
-/* Section Styling */
+/* Fade-In Animation */
 section {
-    padding: 60px 0;
-    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-section h2 {
-    font-family: 'Fredoka One', cursive;
-    margin-bottom: 20px;
-    font-size: 2rem;
+section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.about, .roadmap {
-    background-color: #29293b;
-    padding: 80px 0;
+/* Tooltip Styling */
+.tooltip {
+    position: absolute;
+    background-color: #ffdf00;
+    color: #1e1e2d;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.about-img, .roadmap-img, .tokenomics-img {
-    width: 80%;
-    max-width: 500px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* Footer Styling */
+/* Footer */
 .footer {
     background-color: #1a1a28;
     padding: 20px 0;
     font-size: 0.9rem;
     color: #888;
+    text-align: center;
 }
 
 .footer a {
     color: #ffdf00;
     text-decoration: none;
-}
-
-.footer p {
-    margin-bottom: 10px;
 }
