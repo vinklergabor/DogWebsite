@@ -7,10 +7,9 @@ body, h1, h2, p, ul, ol, a {
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     background-color: #1e1e2d;
     color: #fff;
-    margin: 0;
+    line-height: 1.6;
 }
 
 .container {
@@ -23,33 +22,36 @@ body {
 .hero {
     text-align: center;
     padding: 100px 0;
-    background: linear-gradient(135deg, #2a2a3e, #1f1f2e);
+    background: radial-gradient(circle, #ffdf00, #1e1e2d);
+    color: #1e1e2d;
 }
 
 .hero-img {
-    max-width: 300px;
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
 .hero-title {
     font-family: 'Fredoka One', cursive;
-    font-size: 2.5rem;
-    margin: 20px 0;
-    color: #ffdf00;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
 .cta-buttons .btn {
     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 1rem;
+    padding: 15px 30px;
     margin: 10px;
+    font-size: 1rem;
+    border-radius: 30px;
     text-decoration: none;
-    transition: background 0.3s;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-primary {
@@ -59,44 +61,48 @@ body {
 
 .btn-primary:hover {
     background-color: #d6b600;
+    transform: scale(1.05);
 }
 
 .btn-secondary {
-    background-color: #fff;
-    color: #1e1e2d;
+    background-color: #1e1e2d;
+    border: 2px solid #ffdf00;
 }
 
 .btn-secondary:hover {
-    background-color: #ccc;
+    background-color: #ffdf00;
+    color: #1e1e2d;
+    transform: scale(1.05);
 }
 
-/* About Section */
-.about {
-    padding: 80px 0;
+/* Section Styling */
+section {
+    padding: 60px 0;
     text-align: center;
 }
 
-.about-img {
-    max-width: 400px;
-    margin-top: 20px;
+section h2 {
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: 20px;
+    font-size: 2rem;
 }
 
-/* Tokenomics Section */
-.tokenomics {
-    background: #29293b;
+.about, .roadmap {
+    background-color: #29293b;
     padding: 80px 0;
-    text-align: center;
 }
 
-.tokenomics-img {
+.about-img, .roadmap-img, .tokenomics-img {
+    width: 80%;
     max-width: 500px;
-    margin-top: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Footer */
+/* Footer Styling */
 .footer {
-    background: #1a1a28;
-    text-align: center;
+    background-color: #1a1a28;
     padding: 20px 0;
     font-size: 0.9rem;
     color: #888;
@@ -105,4 +111,8 @@ body {
 .footer a {
     color: #ffdf00;
     text-decoration: none;
+}
+
+.footer p {
+    margin-bottom: 10px;
 }
